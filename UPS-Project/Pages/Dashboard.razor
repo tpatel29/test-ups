@@ -1,0 +1,68 @@
+﻿@page "/dashboard"
+
+
+@code{
+    public class MailBox
+    {
+        public string Type { get; set; } = "";
+        public string NAME { get; set; } = "";
+        public string CREATED { get; set; } = "";
+        public string MSGHELD { get; set; } = "";
+        public string MSGSENT { get; set; } = "";
+        public string MSGRECD { get; set; } = "";
+        public string CONNECTED { get; set; } = "";
+        public string MSGDISKHELD { get; set; } = "";
+        public string RMTMSGHELD { get; set; } = "";
+    }
+    public class Site
+    {
+        public string LOE { get; set; } = "";
+        public string Host { get; set; } = "";
+        public string active_started { get; set; } = "";
+        public string created { get; set; } = "";
+        public IEnumerable<MailBox> Mailboxes { get; set; }
+    }
+    string myStringValue2;
+
+}
+@{
+    string json = System.IO.File.ReadAllText("wwwroot/test.json");
+    Site site = Newtonsoft.Json.JsonConvert.DeserializeObject<Site>(json);
+
+}
+<div class="dashboardContent">
+    <p>
+        <MatStringField @bind-Value="@myStringValue2" Label="Search"></MatStringField>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Created</th>
+                <th>Messages Held</th>
+                <th>Messages Sent</th>
+                <th>Messages Recieved</th>
+                <th>Connected</th>
+                <th>Messages Held on Disk</th>
+                <th>Remote Messages Held</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mailbox in site.Mailboxes)
+            {
+                <tr>
+                    <td>@mailbox.Type</td>
+                    <td>@mailbox.NAME</td>
+                    <td>@mailbox.CREATED</td>
+                    <td>@mailbox.MSGHELD</td>
+                    <td>@mailbox.MSGSENT</td>
+                    <td>@mailbox.MSGRECD</td>
+                    <td>@mailbox.CONNECTED</td>
+                    <td>@mailbox.MSGDISKHELD</td>
+                    <td>@mailbox.RMTMSGHELD</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

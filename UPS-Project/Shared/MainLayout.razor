@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>UPS-Project</PageTitle>
+
+<div class="page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet">
+    <!--<div class="sidebar">-->
+    @*<NavMenu />*@
+    <!--</div>-->
+<main>
+    <div class="top-row px-4">
+        <div class="col "><a href="/"><img src="./ups-logo.svg"></a></div>
+        <div class="col col-md-auto">
+            <button type="button" class="btn btn-warning">Login/Register</button>
+        </div>
+        @*<LoginDisplay />*@
+    </div>
+
+    <article class="content px-4">
+        @Body
+    </article>
+    <Footer/>
+</main>
+    
+</div>
+

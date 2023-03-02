@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/obj/Debug/net7.0/scopedcss/projectbundle/UPS-Project.bundle.scp.css",
+      "PackagePath": "staticwebassets/UPS-Project.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/FONT-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/ICON-LICENSE",
+      "PackagePath": "staticwebassets/css/open-iconic"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/README.md",
+      "PackagePath": "staticwebassets/css/open-iconic/README.md"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.eot"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.otf"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.svg"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.ttf"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "PackagePath": "staticwebassets/css/open-iconic/font/fonts/open-iconic.woff"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/db.json",
+      "PackagePath": "staticwebassets/db.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/test.json",
+      "PackagePath": "staticwebassets/test.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/ups-logo.svg",
+      "PackagePath": "staticwebassets/ups-logo.svg"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.UPS-Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.UPS-Project.props",
+      "PackagePath": "build\\UPS-Project.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.UPS-Project.props",
+      "PackagePath": "buildMultiTargeting\\UPS-Project.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.UPS-Project.props",
+      "PackagePath": "buildTransitive\\UPS-Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
