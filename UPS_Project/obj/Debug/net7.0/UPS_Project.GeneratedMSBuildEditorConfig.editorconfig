@@ -9,45 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UPS_Project
 build_property.RootNamespace = UPS_Project
-build_property.ProjectDir = /Users/tejpatel/Projects/UPS_Project/UPS_Project/
+build_property.ProjectDir = /Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/tejpatel/Projects/UPS_Project/UPS_Project
+build_property.MSBuildProjectDirectory = /Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Areas/Identity/Pages/_ViewStart.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/Error.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/Index.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/Privacy.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/Shared/_LoginPartial.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/_ViewImports.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/_ViewStart.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/tejpatel/Projects/UPS_Project/UPS_Project/Pages/Shared/_Layout.cshtml]
+[/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fw1w2box4t

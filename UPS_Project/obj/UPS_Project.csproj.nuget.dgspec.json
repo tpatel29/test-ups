@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tejpatel/Projects/UPS_Project/UPS_Project/UPS_Project.csproj": {}
+    "/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/UPS_Project.csproj": {}
   },
   "projects": {
-    "/Users/tejpatel/Projects/UPS_Project/UPS_Project/UPS_Project.csproj": {
+    "/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/UPS_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tejpatel/Projects/UPS_Project/UPS_Project/UPS_Project.csproj",
+        "projectUniqueName": "/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/UPS_Project.csproj",
         "projectName": "UPS_Project",
-        "projectPath": "/Users/tejpatel/Projects/UPS_Project/UPS_Project/UPS_Project.csproj",
+        "projectPath": "/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/UPS_Project.csproj",
         "packagesPath": "/Users/TejPatel/.nuget/packages/",
-        "outputPath": "/Users/tejpatel/Projects/UPS_Project/UPS_Project/obj/",
+        "outputPath": "/Users/tejpatel/Projects/test-ups-from-Github/test-ups/UPS_Project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/TejPatel/.nuget/NuGet/NuGet.Config"
