@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope = b-lygsldc2gu
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5u8fu66frs
 
+[/Users/tejpatel/Projects/UPS-Project/UPS-Project/Pages/Test.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-p0rtch08e9
+
 [/Users/tejpatel/Projects/UPS-Project/UPS-Project/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-nh2682j4q0

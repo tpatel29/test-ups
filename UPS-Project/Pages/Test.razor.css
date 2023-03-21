@@ -1,0 +1,156 @@
+﻿/*.dashboardContent {
+    width:100%;
+    height: 100%;*/
+/*    padding: 0 5rem;*/
+/*}*/
+
+/*.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}*/
+
+.mailboxTitle {
+    margin-right: 30px;
+    width: auto;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 20px;
+    /*    margin:0;*/
+    width: 100%;
+}
+
+header {
+    /*    flex: 0 0 100%;*/
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px;
+    /*    background-color: #351C15;*/
+    color: white;
+    background-color: #774f3c;
+    margin-bottom: 25px;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 10px 20px 0;
+    box-sizing: border-box;
+    /*    border: none;*/
+    border-radius: 5px;
+    /*    margin-bottom: 20px;*/
+    background-color: lightgrey;
+    color: black;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.label {
+    width: 100%;
+}
+
+.selectInput {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.numberInput {
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+aside {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 10px);
+    box-sizing: border-box;
+    background-color: #eee;
+    padding: 20px;
+    height: fit-content;
+}
+
+.tableView {
+    display: flex;
+    flex: 0 0 calc(75% - 20px);
+    max-width: calc(75% - 20px);
+    box-sizing: border-box;
+    /*    padding: 20px;*/
+    background-color: #fff;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #FFB500;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    main {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.disconnected {
+    color: red;
+}
+
+.connected {
+    color: green;
+}
+
+tr:hover {
+    background-color: lightyellow;
+}
