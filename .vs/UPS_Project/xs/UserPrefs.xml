@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{4CFAA201-1B23-4FAC-AC6E-DCB0B8B8B486}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UPS_Project/Pages/Privacy.cshtml">
+    <Files>
+      <File FileName="UPS_Project/app.db" />
+      <File FileName="UPS_Project/Pages/Index.cshtml" />
+      <File FileName="UPS_Project/Pages/Privacy.cshtml.cs" />
+      <File FileName="UPS_Project/Pages/Index.cshtml.cs" />
+      <File FileName="UPS_Project/Pages/Error.cshtml.cs" />
+      <File FileName="UPS_Project/Pages/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="UPS_Project/Pages/Shared/_LoginPartial.cshtml" />
+      <File FileName="UPS_Project/Pages/Shared/_Layout.cshtml.css" />
+      <File FileName="UPS_Project/wwwroot/css/site.css" />
+      <File FileName="UPS_Project/Pages/Privacy.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UPS_Project" expanded="True">
+            <Node name="UPS_Project" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Error.cshtml" expanded="True" />
+                <Node name="Index.cshtml" expanded="True" />
+                <Node name="Privacy.cshtml" expanded="True" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.UPS__Project PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
