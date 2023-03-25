@@ -1,16 +1,81 @@
-﻿/*.dashboardContent {
-    width:100%;
-    height: 100%;*/
-/*    padding: 0 5rem;*/
-/*}*/
-
-/*.floatRight {
-    float: right;
+﻿* {
+    box-sizing: border-box;
 }
 
-.floatLeft {
+
+.domainBox {
+    background-color: white;
+    border: 1px solid black;
+    padding: 3px 0 0 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.buildings {
     float: left;
-}*/
+    width: 20%;
+    background: #ccc;
+    padding: 20px;
+    height: auto;
+    background-color: #eee;
+}
+
+.buildings ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.items-list {
+    padding: 3px 0px 0 0px;
+    border-bottom: 0.5px solid black;
+}
+
+.table-content {
+    float: left;
+    padding: 20px;
+    width: 80%;
+/*    background-color: #f1f1f1;*/
+    height: auto;
+}
+
+.dashboard::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dashboard {
+    height: fit-content
+}
+
+.buildingsBox {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+/*    padding: 5px;*/
+}
+
+    ul li a:hover {
+        background-color: #ccc;
+    }
+
+@media (max-width: 700px) {
+    .buildings, .table-content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
 
 .mailboxTitle {
     margin-right: 30px;
@@ -41,7 +106,7 @@ header {
 }
 
 #search {
-    width: 100%;
+/*    width: 100%;*/
     padding: 10px;
     margin: 10px 10px 20px 0;
     box-sizing: border-box;
@@ -53,7 +118,7 @@ header {
 }
 
 input[type="text"] {
-    width: 100%;
+/*    width: 100%;*/
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -62,11 +127,11 @@ input[type="text"] {
 }
 
 .label {
-    width: 100%;
+/*    width: 100%;*/
 }
 
 .selectInput {
-    width: 100%;
+/*    width: 100%;*/
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -75,7 +140,7 @@ input[type="text"] {
 }
 
 .numberInput {
-    width: 48%;
+    width: 20%;
     padding: 10px;
     box-sizing: border-box;
     border: none;
@@ -85,7 +150,8 @@ input[type="text"] {
 
 aside {
     flex: 0 0 calc(25% - 20px);
-    max-width: calc(25% - 10px);
+/*    width: 100%;*/
+/*    max-width: calc(25% - 10px);*/
     box-sizing: border-box;
     background-color: #eee;
     padding: 20px;
@@ -100,7 +166,10 @@ aside {
     /*    padding: 20px;*/
     background-color: #fff;
 }
-
+.inputDiv{
+    display: inline;
+    width:fit-content;
+}
 .table-wrapper {
     overflow-x: auto;
 }
@@ -136,7 +205,13 @@ tr:nth-child(even) {
         margin-right: 0;
         margin-bottom: 20px;
     }
-
+    .buildings{
+        width:100vw;
+    }
+    .tableView {
+        width: 100vw;
+        overflow-x: scroll;
+    }
     main {
         flex: 0 0 100%;
         max-width: 100%;
@@ -153,4 +228,23 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: lightyellow;
+}
+
+
+.filterOpenButton {
+    background-color: lightgray;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+/*    width: 100%;*/
+/*    text-align: left;*/
+    border-radius: 5px;
+/*    float: left;*/
+}
+
+.filterOpenButton:hover {
+    background-color: grey;
+    color: white;
 }

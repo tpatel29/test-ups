@@ -8,6 +8,9 @@ main[b-nh2682j4q0] {
     flex: 1;
 }
 
+/*.content {
+    height: 75vh;
+}*/
 .sidebar[b-nh2682j4q0] {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }

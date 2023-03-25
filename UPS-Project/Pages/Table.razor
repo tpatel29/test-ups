@@ -1,0 +1,52 @@
+﻿@using UPS_Project.Services
+
+
+<table class="">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Created</th>
+            <th>Messages Held</th>
+            <th>Messages Sent</th>
+            <th>Messages Recieved</th>
+            <th>Connected</th>
+            <th>Messages Held on Disk</th>
+            <th>Remote Messages Held</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (FilteredMailboxes != null)
+         {
+            @foreach (var mailbox in FilteredMailboxes)
+                {
+
+                <tr>
+                    <td>@mailbox.TYPE</td>
+                    @if (@mailbox.CONNECTED == "yes")
+                        {
+                        <td class="connected">@mailbox.NAME</td>
+                        }
+                        else
+                        {
+                        <td class="disconnected">@mailbox.NAME</td>
+                        }
+                    @*<td>@mailbox.NAME</td>*@
+                    <td>@mailbox.CREATED</td>
+                    <td>@mailbox.MSGHELD</td>
+                    <td>@mailbox.MSGSENT</td>
+                    <td>@mailbox.MSGRECD</td>
+                    <td>@mailbox.CONNECTED</td>
+                    <td>@mailbox.MSGDISKHELD</td>
+                    <td>@mailbox.RMTMSGHELD</td>
+                </tr>
+                }
+         }
+    </tbody>
+</table>
+
+
+@code{
+    [Parameter]
+    public IEnumerable<MailBox> FilteredMailboxes { get; set; }
+}

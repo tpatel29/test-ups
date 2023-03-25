@@ -1,0 +1,61 @@
+﻿
+.table-content {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    /*    background-color: #f1f1f1;*/
+    height: auto;
+}
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #FFB500;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    main {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.disconnected {
+    color: red;
+}
+
+.connected {
+    color: green;
+}
+
+tr:hover {
+    background-color: lightyellow;
+}

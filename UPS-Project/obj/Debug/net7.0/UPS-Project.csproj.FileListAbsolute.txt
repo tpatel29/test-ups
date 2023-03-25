@@ -82,3 +82,6 @@
 /Users/tejpatel/Projects/UPS-Project/UPS-Project/bin/Debug/net7.0/Newtonsoft.Json.dll
 /Users/tejpatel/Projects/UPS-Project/UPS-Project/obj/Debug/net7.0/scopedcss/Pages/Dashboard.razor.rz.scp.css
 /Users/tejpatel/Projects/UPS-Project/UPS-Project/bin/Debug/net7.0/MatBlazor.dll
+/Users/tejpatel/Projects/UPS-Project/UPS-Project/obj/Debug/net7.0/scopedcss/Pages/Test.razor.rz.scp.css
+/Users/tejpatel/Projects/UPS-Project/UPS-Project/obj/Debug/net7.0/scopedcss/Pages/NewDashboard.razor.rz.scp.css
+/Users/tejpatel/Projects/UPS-Project/UPS-Project/obj/Debug/net7.0/scopedcss/Pages/Table.razor.rz.scp.css

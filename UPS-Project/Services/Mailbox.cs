@@ -1,4 +1,6 @@
-﻿namespace UPS_Project.Services;
+﻿using System.Xml.Linq;
+
+namespace UPS_Project.Services;
 
 public class MailBox
 {
@@ -11,4 +13,9 @@ public class MailBox
     public string CONNECTED { get; set; } = "";
     public int MSGDISKHELD { get; set; } = -1;
     public int RMTMSGHELD { get; set; } = -1;
+
+    public MailBox()
+    {
+
+    }
 }

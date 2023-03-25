@@ -1,68 +1,244 @@
-﻿@page "/dashboard"
+﻿@page "/oldDashboard"
+@using UPS_Project.Services
+@inject SiteService siteService
+
+<div class="container">
+    <aside>
+        <h2>Filters</h2>
+        <form>
+            <label class="label" for="type">Type:</label>
+            <select class="selectInput" @onchange="OnTypeValueChanged">
+                <option value="">Select a type</option>
+                @foreach (var type in allTypes)
+                {
+                    <option value="@type">@type</option>
+                }
+            </select>
+
+            <label class="label">Created:</label>
+            <input type="text" id="created" name="created" @bind="@FilterCreated" @oninput="OnFilterCreatedChanged">
+
+            <label class="label"> Message Held:</label>
+            <input class="numberInput" type="number" id="msgHeld" name="msgHeldMin" placeholder="Min." @bind="@FilterValue" @oninput="OnFilterCreatedChanged">
+            <input class="numberInput" type="number" name="msgHeldMax" placeholder="Max." @bind="@FilterValue" @oninput="OnFilterCreatedChanged">
 
 
-@code{
-    public class MailBox
-    {
-        public string Type { get; set; } = "";
-        public string NAME { get; set; } = "";
-        public string CREATED { get; set; } = "";
-        public string MSGHELD { get; set; } = "";
-        public string MSGSENT { get; set; } = "";
-        public string MSGRECD { get; set; } = "";
-        public string CONNECTED { get; set; } = "";
-        public string MSGDISKHELD { get; set; } = "";
-        public string RMTMSGHELD { get; set; } = "";
-    }
-    public class Site
-    {
-        public string LOE { get; set; } = "";
-        public string Host { get; set; } = "";
-        public string active_started { get; set; } = "";
-        public string created { get; set; } = "";
-        public IEnumerable<MailBox> Mailboxes { get; set; }
-    }
-    string myStringValue2;
+            <label class="label">Message Sent:</label>
+            <input class="numberInput" type="number" id="msgSent" name="msgSentMin" placeholder="Min." @bind="@MsgSentMin" @oninput="OnMsgSentMinValueChanged">
+            <input class="numberInput" type="number" name="msgSentMax" placeholder="Max." @bind="@MsgSentMax" @oninput="OnMsgSentMaxValueChanged">
 
-}
-@{
-    string json = System.IO.File.ReadAllText("wwwroot/test.json");
-    Site site = Newtonsoft.Json.JsonConvert.DeserializeObject<Site>(json);
 
-}
-<div class="dashboardContent">
-    <p>
-        <MatStringField @bind-Value="@myStringValue2" Label="Search"></MatStringField>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Type</th>
-                <th>Name</th>
-                <th>Created</th>
-                <th>Messages Held</th>
-                <th>Messages Sent</th>
-                <th>Messages Recieved</th>
-                <th>Connected</th>
-                <th>Messages Held on Disk</th>
-                <th>Remote Messages Held</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var mailbox in site.Mailboxes)
-            {
-                <tr>
-                    <td>@mailbox.Type</td>
-                    <td>@mailbox.NAME</td>
-                    <td>@mailbox.CREATED</td>
-                    <td>@mailbox.MSGHELD</td>
-                    <td>@mailbox.MSGSENT</td>
-                    <td>@mailbox.MSGRECD</td>
-                    <td>@mailbox.CONNECTED</td>
-                    <td>@mailbox.MSGDISKHELD</td>
-                    <td>@mailbox.RMTMSGHELD</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+            <label class="label" for="msgRecd">Message Recieved:</label>
+            <input class="numberInput" type="number" id="msgRecd" name="msgRecdMin" placeholder="Min." @bind="@MsgRecdMin" @oninput="OnMsgRecdMinValueChanged">
+            <input class="numberInput" type="number" name="msgRecdMax" placeholder="Max." @bind="@MsgRecdMax" @oninput="OnMsgRecdMaxValueChanged">
+
+            <label class="label" for="connected">Connected:</label>
+            <select class="selectInput" @onchange="OnConnectedValueChanged">
+                <option value="">Select a Connection</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label class="label" for="msgDiskHeld">Message Held Disk:</label>
+            <input class="numberInput" type="number" id="msgDiskHeld" name="msgHeldDiskMin" placeholder="Min." @bind="@MsgDiskHeldMin" @oninput="OnMsgDiskHeldMinValueChanged">
+            <input class="numberInput" type="number" name="MsgHeldDiskMax" placeholder="Max." @bind="@MsgDiskHeldMax" @oninput="OnMsgDiskHeldMaxValueChanged">
+
+            <label class="label" for="rmtMsgHeld">Remote Message Held:</label>
+            <input class="numberInput" type="number" id="rmtMsgHeld" name="rmtMsgHeldMin" placeholder="Min." @bind="@RmtMsgHeldMin" @oninput="OnRmtMsgHeldMinValueChanged">
+            <input class="numberInput" type="number" name="rmtMsgHeldMax" placeholder="Max." @bind="@RmtMsgHeldMax" @oninput="OnRmtMsgHeldMaxValueChanged">
+        </form>
+    </aside>
+    <main class="tableView">
+        <div class="table-wrapper">
+            @*<label for="search">Search:</label>*@
+            <header class="">
+                @*<h1>@(site != null ? site.LOE.ToUpper() : "")</h1>*@
+                @*<h1 class="floatLeft mailboxTitle">@(site != null ? site.LOE.ToUpper() : "")</h1>
+                    <div class="floatRight">
+                        <p>Created on: @(site != null ? site.created : "")</p>
+                        <p>Started on: @(site != null ? site.active_started : "")</p>
+                        <label for="search">Search:</label>
+                        <input type="text" id="search" placeholder="Search..." @bind="@FilterValue" @oninput="OnFilterValueChanged" />
+                    </div>*@
+                <div class="floatLeft">
+                    <h1 class="mailboxTitle">@(site != null ? site.LOE.ToUpper() : "")</h1>
+                    <input type="text" id="search" placeholder="Search..." @bind="@FilterValue" @oninput="OnFilterValueChanged" />
+
+                    @*<label for="search">Search:</label>
+                        <input type="text" id="search" placeholder="Search..." @bind="@FilterValue" @oninput="OnFilterValueChanged" />*@
+                </div>
+                <div class="floatRight">
+                    <p>Created on: @(site != null ? site.created : "")</p>
+                    <p>Started on: @(site != null ? site.active_started : "")</p>
+
+                </div>
+
+            </header>
+            @*<input type="text" id="search" placeholder="Search..." @bind="@FilterValue" @oninput="OnFilterValueChanged" />*@
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Created</th>
+                        <th>Messages Held</th>
+                        <th>Messages Sent</th>
+                        <th>Messages Recieved</th>
+                        <th>Connected</th>
+                        <th>Messages Held on Disk</th>
+                        <th>Remote Messages Held</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var mailbox in FilteredMailboxes)
+                    {
+
+                        <tr>
+                            <td>@mailbox.TYPE</td>
+                            @if (@mailbox.CONNECTED == "yes")
+                            {
+                                <td class="connected">@mailbox.NAME</td>
+                            }
+                            else
+                            {
+                                <td class="disconnected">@mailbox.NAME</td>
+                            }
+                            @*<td>@mailbox.NAME</td>*@
+                            <td>@mailbox.CREATED</td>
+                            <td>@mailbox.MSGHELD</td>
+                            <td>@mailbox.MSGSENT</td>
+                            <td>@mailbox.MSGRECD</td>
+                            <td>@mailbox.CONNECTED</td>
+                            <td>@mailbox.MSGDISKHELD</td>
+                            <td>@mailbox.RMTMSGHELD</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </main>
 </div>
+
+@code {
+    private static Site site;
+    private IEnumerable<MailBox> mailboxes = Enumerable.Empty<MailBox>();
+
+    private string FilterValue { get; set; }
+    private string SelectedType { get; set; }
+    private string SelectedConnection { get; set; }
+    private string FilterCreated { get; set; }
+    private string MsgHeldMin { get; set; }
+    private string MsgHeldMax { get; set; }
+    private string MsgSentMin { get; set; }
+    private string MsgSentMax { get; set; }
+    private string MsgRecdMin { get; set; }
+    private string MsgRecdMax { get; set; }
+    private string MsgDiskHeldMin { get; set; }
+    private string MsgDiskHeldMax { get; set; }
+    private string RmtMsgHeldMin { get; set; }
+    private string RmtMsgHeldMax { get; set; }
+
+
+
+    private IEnumerable<MailBox> FilteredMailboxes =>
+string.IsNullOrEmpty(FilterValue) && string.IsNullOrEmpty(SelectedType) && string.IsNullOrEmpty(SelectedConnection) && string.IsNullOrEmpty(FilterCreated)
+&& string.IsNullOrEmpty(MsgHeldMin) && string.IsNullOrEmpty(MsgHeldMax) && string.IsNullOrEmpty(MsgSentMin) && string.IsNullOrEmpty(MsgSentMax)
+&& string.IsNullOrEmpty(MsgRecdMin) && string.IsNullOrEmpty(MsgRecdMax) && string.IsNullOrEmpty(MsgDiskHeldMin) && string.IsNullOrEmpty(MsgDiskHeldMax)
+&& string.IsNullOrEmpty(RmtMsgHeldMin) && string.IsNullOrEmpty(RmtMsgHeldMax)
+? mailboxes
+: mailboxes.Where(row =>
+(string.IsNullOrEmpty(FilterValue) || row.NAME.Contains(FilterValue, StringComparison.OrdinalIgnoreCase)) &&
+(string.IsNullOrEmpty(SelectedType) || row.TYPE.Contains(SelectedType, StringComparison.OrdinalIgnoreCase)) &&
+(string.IsNullOrEmpty(SelectedConnection) || row.CONNECTED.Contains(SelectedConnection, StringComparison.OrdinalIgnoreCase)) &&
+(string.IsNullOrEmpty(FilterCreated) || row.CREATED.Contains(FilterCreated, StringComparison.OrdinalIgnoreCase)) &&
+((string.IsNullOrEmpty(MsgHeldMin) || row.MSGHELD >= int.Parse(MsgHeldMin)) &&
+(string.IsNullOrEmpty(MsgHeldMax) || row.MSGHELD <= int.Parse(MsgHeldMax))) &&
+((string.IsNullOrEmpty(MsgSentMin) || row.MSGSENT >= int.Parse(MsgRecdMin)) &&
+(string.IsNullOrEmpty(MsgSentMax) || row.MSGSENT <= int.Parse(MsgRecdMax))) &&
+((string.IsNullOrEmpty(MsgRecdMin) || row.MSGRECD >= int.Parse(MsgRecdMin)) &&
+(string.IsNullOrEmpty(MsgRecdMax) || row.MSGRECD <= int.Parse(MsgRecdMax))) &&
+((string.IsNullOrEmpty(MsgDiskHeldMin) || row.MSGDISKHELD >= int.Parse(MsgDiskHeldMin)) &&
+(string.IsNullOrEmpty(MsgDiskHeldMax) || row.MSGDISKHELD <= int.Parse(MsgDiskHeldMax))) &&
+((string.IsNullOrEmpty(RmtMsgHeldMin) || row.RMTMSGHELD >= int.Parse(RmtMsgHeldMin)) &&
+(string.IsNullOrEmpty(RmtMsgHeldMax) || row.RMTMSGHELD <= int.Parse(RmtMsgHeldMax)))
+
+);
+
+    static readonly HttpClient client = new HttpClient();
+    SiteService service = new SiteService(client);
+
+    protected override async Task OnInitializedAsync()
+    {
+        site = await service.GetSiteAsync("COS_Data");
+        mailboxes = site.Mailboxes;
+
+    }
+
+    private void OnFilterValueChanged(ChangeEventArgs e)
+    {
+        FilterValue = e.Value.ToString();
+    }
+    private void OnTypeValueChanged(ChangeEventArgs e)
+    {
+        SelectedType = e.Value.ToString();
+    }
+    private void OnConnectedValueChanged(ChangeEventArgs e)
+    {
+        SelectedConnection = e.Value.ToString();
+    }
+    private void OnFilterCreatedChanged(ChangeEventArgs e)
+    {
+        FilterCreated = e.Value.ToString();
+    }
+    private void OnMsgHeldMinValueChanged(ChangeEventArgs e)
+    {
+        MsgHeldMin = e.Value.ToString();
+    }
+    private void OnMsgHeldMaxValueChanged(ChangeEventArgs e)
+    {
+        MsgHeldMax = e.Value.ToString();
+    }
+    private void OnMsgSentMinValueChanged(ChangeEventArgs e)
+    {
+        MsgSentMin = e.Value.ToString();
+    }
+    private void OnMsgSentMaxValueChanged(ChangeEventArgs e)
+    {
+        MsgSentMax = e.Value.ToString();
+    }
+    private void OnMsgRecdMinValueChanged(ChangeEventArgs e)
+    {
+        MsgRecdMin = e.Value.ToString();
+    }
+    private void OnMsgRecdMaxValueChanged(ChangeEventArgs e)
+    {
+        MsgRecdMax = e.Value.ToString();
+    }
+    private void OnMsgDiskHeldMinValueChanged(ChangeEventArgs e)
+    {
+        MsgDiskHeldMin = e.Value.ToString();
+    }
+    private void OnMsgDiskHeldMaxValueChanged(ChangeEventArgs e)
+    {
+        MsgDiskHeldMax = e.Value.ToString();
+    }
+    private void OnRmtMsgHeldMinValueChanged(ChangeEventArgs e)
+    {
+        RmtMsgHeldMin = e.Value.ToString();
+    }
+    private void OnRmtMsgHeldMaxValueChanged(ChangeEventArgs e)
+    {
+        RmtMsgHeldMax = e.Value.ToString();
+    }
+
+    private List<string> allTypes
+    {
+
+        get
+        {
+            return mailboxes.Select(mailbox => mailbox.TYPE).Distinct().ToList();
+        }
+    }
+
+
+}

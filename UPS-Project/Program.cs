@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using UPS_Project.Areas.Identity;
 using UPS_Project.Data;
-
+using System.Net.Http;
+using System.Net.Http.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,9 +20,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddHttpClient();
+//builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<SiteService>();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
+
 
 var app = builder.Build();
 

@@ -5,6 +5,46 @@
       "PackagePath": "staticwebassets/UPS-Project.bundle.scp.css"
     },
     {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/COS_Data.json",
+      "PackagePath": "staticwebassets/COS_Data.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/Client_Data.json",
+      "PackagePath": "staticwebassets/Client_Data.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/Client_Data2.json",
+      "PackagePath": "staticwebassets/Client_Data2.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/Client_Data3.json",
+      "PackagePath": "staticwebassets/Client_Data3.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/Client_Data4.json",
+      "PackagePath": "staticwebassets/Client_Data4.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/SiteNode_Data_CriticalSite.json",
+      "PackagePath": "staticwebassets/SiteNode_Data_CriticalSite.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/SiteNode_Data_Medium.json",
+      "PackagePath": "staticwebassets/SiteNode_Data_Medium.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/SiteNode_Data_Small.json",
+      "PackagePath": "staticwebassets/SiteNode_Data_Small.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/USKYSDF.json",
+      "PackagePath": "staticwebassets/USKYSDF.json"
+    },
+    {
+      "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/USNJRAR.json",
+      "PackagePath": "staticwebassets/USNJRAR.json"
+    },
+    {
       "Id": "/Users/tejpatel/Projects/UPS-Project/UPS-Project/wwwroot/css/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
     },
